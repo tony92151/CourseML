@@ -23,10 +23,6 @@ class gameOfLive:
 				temp.append(self.black)
 		temp = np.array(temp).reshape((self.size,self.size))
 		self.game = temp
-		#plt.imshow(self.game)
-		#time.sleep(10)
-		#print(temp)
-		#print(self.game[2-1:2+2,:][:,2-1:2+2])
 
 	def step(self,frameNum):
 		tem = np.zeros(self.size**2).reshape((self.size,self.size))
@@ -48,9 +44,7 @@ class gameOfLive:
 						tem[i][j] = self.black
 		self.game = tem
 		img = self.ax.imshow(a.game) 
-		#print("Game update!")
-	#def RunStepAnimation(self):
-		
+
 if __name__ == '__main__': 
 	a = gameOfLive(30)
 	a.initGame()
